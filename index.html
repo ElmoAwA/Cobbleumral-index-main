@@ -1,0 +1,53 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Pixelify+Sans:wght@500;600&display=swap" rel="stylesheet">
+<title>CobbleUmbral | Servidor de Cobblemon en español</title>
+<meta name="description" content="Servidor de Cobblemon en español con liga, torneos, dungeons y contenido propio. Instala el launcher y entra en minutos.">
+<meta property="og:title" content="CobbleUmbral | Servidor de Cobblemon en español"><meta property="og:description" content="Liga con baneos votados por la comunidad, torneos, dungeons y contenido hecho a medida."><meta property="og:image" content="https://cobbleumbral.fun/assets/logo.png"><meta name="theme-color" content="#1b1446">
+<link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="assets/site.css"></head><body>
+<header class="barra"><div class="envase"><a class="marca" href="./"><img src="assets/logo.png" alt="" width="40" height="40"><span>CobbleUmbral</span></a><nav aria-label="Principal"><a class="opc" href="#contenido">El server</a><a href="https://liga.cobbleumbral.fun/">Liga</a><a href="https://discord.gg/3kShRn4NDS">Discord</a><a href="https://tienda.cobbleumbral.fun/">Tienda</a><a class="boton" href="descargar/">Jugar</a></nav></div></header>
+<main>
+<div class="portada"><div class="envase">
+<div>
+<h1>Tu aventura Cobblemon empieza al caer la noche</h1>
+<p class="intro">Un servidor en español con liga, torneos y dungeons hechos a medida, y Pokémon salvajes que no te van a esperar de brazos cruzados.</p>
+<div class="ip px"><code id="ip">mc.cobbleumbral.fun</code><button id="copiar" type="button">Copiar IP</button></div>
+<div class="acciones"><a class="boton px" href="descargar/">Descargar launcher</a><a class="boton sec px" href="https://discord.gg/3kShRn4NDS">Unirme al Discord</a></div>
+<p class="estado" id="estado" aria-live="polite"></p>
+</div>
+<div class="escena">
+<svg class="luna" viewBox="0 0 32 32" aria-hidden="true" id="luna"></svg>
+<img class="heroe-img" id="heroeImg" src="cobblemon/i/umbreon.webp" alt="Umbreon" width="320" height="320"><canvas id="heroe" hidden role="img" aria-label="Modelo 3D de un Pokémon de Cobblemon. Arrástralo para girarlo."></canvas>
+<div class="mando"><span class="px" id="nombre">Umbreon</span><button class="px" type="button" id="otro">Otro Pokémon</button><button class="px" type="button" id="shiny" aria-pressed="false">Shiny</button></div>
+</div>
+</div>
+<svg class="horizonte" id="horizonte" preserveAspectRatio="none" aria-hidden="true"></svg>
+</div>
+
+<section id="contenido"><div class="envase">
+<div class="titulo"><h2>Contenido que hicimos para este server</h2><p>Los sistemas grandes de CobbleUmbral son mods propios. Esto es lo que vas a encontrar al entrar.</p></div>
+<div class="filas">
+<article class="fila"><div class="escenario px" data-escena="liga"><img src="assets/escena/kommoo.webp" alt="" loading="lazy"></div><div class="texto"><h3>Una liga que decide la comunidad</h3><p>La Liga Umbral tiene su propia regulación cada temporada. El staff propone los candidatos al baneo, la comunidad vota, y quien gana la liga puede meter o sacar un Pokémon a su elección. <a href="https://liga.cobbleumbral.fun/">Mira la regulación vigente</a>.</p><ul class="datos"><li class="px">Baneos por votación</li><li class="px">Regulación por temporada</li><li class="px">Premio del campeón</li></ul></div></article>
+<article class="fila"><div class="escenario px" data-escena="torneo"><img src="assets/escena/hawlucha.webp" alt="" loading="lazy"></div><div class="texto"><h3>Torneos con bracket en vivo</h3><p>Antes de cada combate ves el equipo rival y eliges tu Pokémon inicial. Los premios llegan directo a tu correo dentro del juego.</p><ul class="datos"><li class="px">Vista previa de equipos</li><li class="px">Bracket en vivo</li><li class="px">Premios al correo</li></ul></div></article>
+<article class="fila"><div class="escenario px" data-escena="dungeon"><img src="assets/escena/dusknoir.webp" alt="" loading="lazy"></div><div class="texto"><h3>Dungeons con una sola vida</h3><p>Arma tu grupo, limpia las salas y derrota al jefe. Si caes, miras el resto como espectador. El botín es aleatorio y las entradas se renuevan cada día.</p><ul class="datos"><li class="px">En grupo</li><li class="px">Jefes</li><li class="px">Botín aleatorio</li></ul></div></article>
+<article class="fila"><div class="escenario px" data-escena="noche"><img src="assets/escena/houndoom.webp" alt="" loading="lazy"></div><div class="texto"><h3>La noche es de los Pokémon</h3><p>Reemplazamos los mobs agresivos por Pokémon que te atacan. También te cruzarás con entrenadores errantes, y conviene mirar dos veces antes de retar a alguno: hay un Mimic suelto.</p><ul class="datos"><li class="px">Pokémon agresivos</li><li class="px">Entrenadores errantes</li><li class="px">Cuidado con el Mimic</li></ul></div></article>
+<article class="fila"><div class="escenario px" data-escena="mesa"><img src="assets/escena/alakazam.webp" alt="" loading="lazy"></div><div class="texto"><h3>Una mesa de encantamientos propia</h3><p>Encantamientos únicos, niveles mejorados, maldiciones y bendiciones. El material que la alimenta se consigue en las dungeons.</p><ul class="datos"><li class="px">Encantamientos únicos</li><li class="px">Maldiciones</li><li class="px">Bendiciones</li></ul></div></article>
+</div>
+<ul class="ademas"><li>Spawns de legendarios</li><li>Pase de batalla por temporadas</li><li>Subastas y economía</li><li>Protección de terrenos</li><li>Eventos de temporada</li><li>Correo dentro del juego</li></ul>
+</div></section>
+
+<section class="oscura"><div class="envase inicial">
+<div><h2>Empieza con el inicial que quieras</h2><p style="margin-top:.8rem;color:var(--suave);font-size:1.15rem">Iniciales de todas las regiones, con 3 IVs perfectos. Tú decides si sale shiny. Toca uno para verlo.</p><div class="iniciales" id="iniciales"></div></div>
+<div class="vitrina px"><img class="heroe-img" id="vitrinaImg" alt="" width="320" height="320"><canvas id="vitrina" hidden role="img" aria-label="Modelo 3D del inicial elegido"></canvas><div class="mando"><span class="px" id="nombreIni"></span><button class="px" type="button" id="shinyIni" aria-pressed="false">Shiny</button></div></div>
+</div></section>
+
+<section id="entrar"><div class="envase">
+<div class="titulo"><h2>Entra en tres pasos</h2></div>
+<ol class="pasos">
+<li class="px"><h3>Descarga el launcher</h3><p>Instala Minecraft 1.21.1 y todos los mods, y los mantiene actualizados por ti.</p><a class="boton" href="descargar/">Ir a la descarga</a></li>
+<li class="px"><h3>Abre el juego</h3><p>Inicia desde el launcher. Si prefieres instalar a mano, también tienes el modpack.</p></li>
+<li class="px"><h3>Conéctate</h3><p>Entra a <strong>mc.cobbleumbral.fun</strong>. Nos vemos adentro.</p></li>
+</ol>
+</div></section>
+<div class="discord"><section><div class="envase"><div><h2>La comunidad está en Discord</h2><p>Soporte, anuncios y gente con quien jugar.</p></div><a class="boton px" href="https://discord.gg/3kShRn4NDS">Unirme al Discord</a></div></section></div>
+</main>
+<footer><div class="envase"><div class="enl"><a href="https://discord.gg/3kShRn4NDS">Discord</a><a href="https://liga.cobbleumbral.fun/">Liga Umbral</a><a href="https://tienda.cobbleumbral.fun/">Tienda</a></div><p>CobbleUmbral es un servidor hecho por su comunidad. No está afiliado a Mojang, Microsoft, Nintendo, Game Freak, The Pokémon Company ni al equipo de Cobblemon.</p><p>Modelos y texturas de <a href="https://cobblemon.com/">Cobblemon</a>, de The Cobblemon Team, bajo licencia <a href="https://creativecommons.org/licenses/by-nc/3.0/">CC BY-NC 3.0</a>. Las miniaturas son renders hechos a partir de esos modelos.</p></div></footer>
+<script src="assets/home.js"></script></body></html>
