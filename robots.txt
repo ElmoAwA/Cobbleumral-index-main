@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /herramientas/
+
+Sitemap: https://cobbleumbral.fun/sitemap.xml

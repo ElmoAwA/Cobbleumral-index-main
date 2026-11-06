@@ -7,7 +7,9 @@ def L(k,d=''): return es.get(k) or en.get(k) or d
 geos={os.path.basename(f)[:-9]:f for f in glob.glob(B+'models/*/*.geo.json')}
 geos.update({os.path.basename(f)[:-9]:f for f in glob.glob(B+'models/*/*/*.geo.json')})
 posers={}
-for f in glob.glob(B+'posers/**/*.json',recursive=True): posers[os.path.basename(f)[:-5]]=f
+for f in glob.glob(B+'posers/**/*.json',recursive=True):
+    try: json.load(open(f,encoding='utf8')); posers[os.path.basename(f)[:-5]]=f
+    except Exception: print('poser con error, se ignora:',f)
 anims={}
 for f in glob.glob(B+'animations/**/*.animation.json',recursive=True):
     try:
@@ -111,7 +113,7 @@ def abil(lst):
 for f in sorted(glob.glob(root+'/data/cobblemon/species/*/*.json')):
     sp=os.path.basename(f)[:-5]; d=json.load(open(f,encoding='utf8'))
     base={'name':d['name'],'dex':d['nationalPokedexNumber'],'types':[x for x in(d.get('primaryType'),d.get('secondaryType')) if x],'stats':stats(d['baseStats']),'ab':abil(d.get('abilities',[])),'ht':d.get('height'),'wt':d.get('weight'),'desc':' '.join(L(x) for x in d.get('pokedex',[]))}
-    if not d.get('implemented'):
+    if not d.get('implemented') and sp not in res:
         dex[sp]=dict(base,m=None)
         for fm in d.get('forms',[]):
             nm=fm.get('name','').lower()
